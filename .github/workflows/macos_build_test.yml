@@ -60,7 +60,7 @@ jobs:
     - name: Build Pypi Python Package
       run: |
         cd ${{github.workspace}}/${{env.BUILD_TYPE}}
-        python3 -m build
+        python3 setup.py bdist_wheel --plat-name=macosx_11_0_x86_64
 
     - name: Pytest
       working-directory: ${{github.workspace}}
@@ -122,7 +122,7 @@ jobs:
     - name: Build Pypi Python Package
       run: |
         cd ${{github.workspace}}/${{env.BUILD_TYPE}}
-        python3 -m build
+        python3 setup.py bdist_wheel --plat-name=macosx_10_15_x86_64
 
     - name: Pytest
       working-directory: ${{github.workspace}}

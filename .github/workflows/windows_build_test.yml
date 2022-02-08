@@ -51,7 +51,7 @@ jobs:
     - name: Build Pypi Python Package
       run: |
         cd ${{github.workspace}}/${{env.BUILD_TYPE}}
-        py -m build
+        py setup.py bdist_wheel --plat-name=win_amd64
 
     - name: Pytest
       working-directory: ${{github.workspace}}

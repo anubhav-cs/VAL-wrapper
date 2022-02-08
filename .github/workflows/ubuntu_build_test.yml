@@ -2,9 +2,9 @@ name: BuildLinux
 
 on:
   push:
-    branches: [ main1 ]
+    branches: [ main ]
   pull_request:
-    branches: [ main1 ]
+    branches: [ main ]
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
@@ -56,7 +56,7 @@ jobs:
     - name: Build Pypi Python Package
       run: |
         cd ${{github.workspace}}/${{env.BUILD_TYPE}}
-        python3 -m build
+        python3 setup.py bdist_wheel --plat-name=manylinux2014_x86_64
 
     - name: Pytest
       working-directory: ${{github.workspace}}
@@ -114,7 +114,7 @@ jobs:
     - name: Build Pypi Python Package
       run: |
         cd ${{github.workspace}}/${{env.BUILD_TYPE}}
-        python3 -m build
+        python3 setup.py bdist_wheel --plat-name=manylinux2014_x86_64
 
     - name: Pytest
       working-directory: ${{github.workspace}}
