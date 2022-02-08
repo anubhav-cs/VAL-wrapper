@@ -43,6 +43,7 @@ jobs:
         cmake -B ${{github.workspace}}/build 
         -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
         -DCMAKE_INSTALL_PREFIX=${{github.workspace}}/${{env.BUILD_TYPE}}
+        -DCMAKE_GENERATOR="Unix Makefiles"
 
     - name: Build
       # Build your program with the given configuration
