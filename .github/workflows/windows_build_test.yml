@@ -51,7 +51,7 @@ jobs:
     - name: Build Pypi Python Package
       run: |
         cd ${{github.workspace}}/${{env.BUILD_TYPE}}
-        python3 -m build
+        runas /user:administrator "python3 -m build"
 
     - name: Pytest
       working-directory: ${{github.workspace}}
