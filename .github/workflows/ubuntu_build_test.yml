@@ -47,10 +47,10 @@ jobs:
     - name: Build
       # Build your program with the given configuration
       run: > 
-        cmake --build ${{github.workspace}}/build
+        cmake --build ${{github.workspace}}/build --target install
 
-    - name: Assemble Python Package
-      run: cmake --install  ${{github.workspace}}/build
+    - name: Install Python Package
+      run: python3 -m pip install ${{github.workspace}}/${{env.BUILD_TYPE}}
 
     - name: Pytest
       working-directory: ${{github.workspace}}
