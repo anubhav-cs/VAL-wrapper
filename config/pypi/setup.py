@@ -37,7 +37,7 @@ setup(
     extras_require  =   {},
     scripts         =   ['package/scripts/validate.py', ],
     include_package_data = True,
-    # cmdclass={'bdist_wheel': bdist_wheel},
+    cmdclass={'bdist_wheel': bdist_wheel},
 
     # ext_modules=[
     #     Extension(
