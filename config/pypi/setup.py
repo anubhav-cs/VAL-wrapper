@@ -4,15 +4,16 @@ from setuptools import setup, find_packages, Extension
 with open("README.md", "r") as fh:
     project_description = fh.read()
 
-
-try:
-    from wheel.bdist_wheel import bdist_wheel as _bdist_wheel
-    class bdist_wheel(_bdist_wheel):
-        def finalize_options(self):
-            _bdist_wheel.finalize_options(self)
-            self.root_is_pure = False
-except ImportError:
-    bdist_wheel = None
+    """Block 1 - Trigger platform specific wheel
+    """
+# try:
+#     from wheel.bdist_wheel import bdist_wheel as _bdist_wheel
+#     class bdist_wheel(_bdist_wheel):
+#         def finalize_options(self):
+#             _bdist_wheel.finalize_options(self)
+#             self.root_is_pure = False
+# except ImportError:
+#     bdist_wheel = None
 
 
 setup(
@@ -37,8 +38,11 @@ setup(
     extras_require  =   {},
     scripts         =   ['package/scripts/validate.py', ],
     include_package_data = True,
-    cmdclass={'bdist_wheel': bdist_wheel}, # Delete this
+    
+    # cmdclass={'bdist_wheel': bdist_wheel}, # Part of Block 1
 
+    ## Block 2 - An alternative method to trigger platform specific wheel
+    ##         - Has issues on windows   
     # ext_modules=[
     #     Extension(
     #         name='my.dummy.module',
