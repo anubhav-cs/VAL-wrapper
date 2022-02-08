@@ -17,11 +17,11 @@ env:
   BUILD_TYPE: Release
 
 jobs:
-  build-ubuntu-latest:
+  build-ubuntu-18:
     # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
     # You can convert this to a matrix build if you need cross-platform coverage.
     # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
     - uses: actions/checkout@v2
@@ -227,7 +227,7 @@ jobs:
     - build-windows-latest
     - build-macos-10_15
     - build-macos-latest
-    - build-ubuntu-latest
+    - build-ubuntu-18
 
     runs-on: ubuntu-latest
 
