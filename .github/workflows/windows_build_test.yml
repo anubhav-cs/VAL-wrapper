@@ -19,8 +19,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-    - name: Remove previous builds if any
       
     - name: Set up Python 3.10
       uses: actions/setup-python@v2
