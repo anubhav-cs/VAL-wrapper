@@ -18,7 +18,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name            =   "val-wrapper",
-    version         =   "0.1.3",
+    version         =   "0.1.4",
     author          =   "Anubhav Singh",
     author_email    =   "anubhav.singh.er@pm.me",
     description     =   "plan validation toolkit",
