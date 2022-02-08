@@ -48,7 +48,7 @@ jobs:
       run: python3 -m pip install ${{github.workspace}}/${{env.BUILD_TYPE}}
 
     - name: Build Pypi Python Package
-      run: >
+      run: |
         cd ${{github.workspace}}/build
         python3 -m build
 
