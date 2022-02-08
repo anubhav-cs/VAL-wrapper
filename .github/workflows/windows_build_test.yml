@@ -2,9 +2,9 @@ name: BuildWindows
 
 on:
   push:
-    branches: [ main_stop ]
+    branches: [ main ]
   pull_request:
-    branches: [ main_stop ]
+    branches: [ main ]
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
