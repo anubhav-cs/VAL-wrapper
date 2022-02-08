@@ -55,7 +55,7 @@ jobs:
 
     - name: Build Pypi Python Package
       run: |
-        cd ${{github.workspace}}/build
+        cd {{github.workspace}}/${{env.BUILD_TYPE}}
         python3 -m build
 
     - name: Pytest
