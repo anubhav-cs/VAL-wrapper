@@ -1,8 +1,3 @@
-[![BuildTest](https://github.com/anubhav-cs/VAL-wrapper/actions/workflows/build_test.yml/badge.svg)](https://github.com/anubhav-cs/VAL-wrapper/actions/workflows/build_test.yml) 
-[![CodeQL](https://github.com/anubhav-cs/VAL-wrapper/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/anubhav-cs/VAL-wrapper/actions/workflows/codeql-analysis.yml)
-[![PypiPublish](https://github.com/anubhav-cs/VAL-wrapper/actions/workflows/pypi_publish.yml/badge.svg)](https://github.com/anubhav-cs/VAL-wrapper/actions/workflows/pypi_publish.yml)
-[![TestPypiPublish](https://github.com/anubhav-cs/VAL-wrapper/actions/workflows/testpypi_publish.yml/badge.svg)](https://github.com/anubhav-cs/VAL-wrapper/actions/workflows/testpypi_publish.yml)
-
 # val-wrapper
 A python wrapper over KCL-VAL binaries compiled from [source](https://github.com/KCL-Planning/VAL)
 
