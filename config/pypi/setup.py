@@ -24,7 +24,7 @@ setup(
     description     =   "plan validation toolkit",
     long_description=   project_description,
     long_description_content_type='text/markdown',
-    url             =   "https://github.com/LAPKT-dev/VAL-wrapper",
+    url             =   "https://github.com/LAPKT-dev/val-wrapper",
     packages        =   find_packages('package'),  
     package_dir     =   {'': 'package'},  
     classifiers     =   [
