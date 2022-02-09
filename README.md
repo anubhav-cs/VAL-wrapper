@@ -29,8 +29,9 @@ The *wrapper* source code in this repository is released under MIT license. On t
         python3 setup.py bdist_wheel --plat-name=<platform tag>
 
   - Platform tags are based on the platform on which the binaries were built, for example:
-    - win_amd64
-    - manylinux1_x86_64
+    - `win_amd64`
+    - `manylinux1_x86_64`
+    - `manylinux_x_y_x86_64`
     - ... many more, lookup the documentation
 
 ## PIP install using locally built binaries
