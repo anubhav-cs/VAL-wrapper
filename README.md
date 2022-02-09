@@ -8,7 +8,7 @@ The entire build and python packaging is handled by cmake. The VAL github source
 
 LICENSE
 -------
-The *wrapper* source code in this repository is released under MIT license. On the other hand, the pypi release, which redistributes the VAL binaries carries the original [license](https://github.com/KCL-Planning/VAL/blob/3c7a1f330bdab0ba28a4762bb45c3f06c27fb6d4/LICENSE) under which VAL source is released.
+The *wrapper* source code in this repository is released under MIT license. On the other hand, the pypi release, which redistributes the VAL binaries, carries the original [license](https://github.com/KCL-Planning/VAL/blob/3c7a1f330bdab0ba28a4762bb45c3f06c27fb6d4/LICENSE) under which VAL source is released.
 
 # BUILD Commands
 
