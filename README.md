@@ -6,6 +6,11 @@
 # val-wrapper
 A python wrapper over KCL-VAL binaries compiled from [source](https://github.com/KCL-Planning/VAL)
 
+Install
+-------
+
+        python3 -m pip install val-wrapper
+
 How does it work?
 =================
 
