@@ -19,7 +19,7 @@ endif(MINGW)
 
 list(APPEND LIST_CMAKE_ARGS
     -DCMAKE_BUILD_TYPE=Release 
-    -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}/package/val_wrapper
+    -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}/val_build/
     -DCMAKE_SHARED_LINKER_FLAGS=${CMAKE_SHARED_LINKER_FLAGS}
     -DCMAKE_EXE_LINKER_FLAGS=${CMAKE_EXE_LINKER_FLAGS}
     -DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}
@@ -33,6 +33,12 @@ ExternalProject_Add(external_VAL
     CMAKE_ARGS ${LIST_CMAKE_ARGS}
 )
 
+install(DIRECTORY
+    ${CMAKE_INSTALL_PREFIX}/val_build/
+    FILE_PERMISSIONS OWNER_EXECUTE OWNER_WRITE OWNER_READ
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/pypi_release/package/val_wrapper
+)
+
 configure_file(${PROJECT_SOURCE_DIR}/scripts/validate.py 
     ${PROJECT_BINARY_DIR}/pypi_release/package/scripts/validate.py 
     FILE_PERMISSIONS OWNER_EXECUTE OWNER_WRITE OWNER_READ
@@ -41,7 +47,7 @@ configure_file(${PROJECT_SOURCE_DIR}/scripts/validate.py
 install(FILES
     ${PROJECT_BINARY_DIR}/pypi_release/package/scripts/validate.py 
     PERMISSIONS OWNER_EXECUTE OWNER_WRITE OWNER_READ
-    DESTINATION ${CMAKE_INSTALL_PREFIX}/package/scripts
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/pypi_release/package/scripts
 )
 
 configure_file(${PROJECT_SOURCE_DIR}/src/wrapper.py 
@@ -58,7 +64,7 @@ install(FILES
     ${PROJECT_BINARY_DIR}/pypi_release/package/val_wrapper/__init__.py 
     ${PROJECT_BINARY_DIR}/pypi_release/package/val_wrapper/wrapper.py 
     PERMISSIONS OWNER_EXECUTE OWNER_WRITE OWNER_READ
-    DESTINATION ${CMAKE_INSTALL_PREFIX}/package/val_wrapper
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/pypi_release/package/val_wrapper
 )
 
 configure_file(${PROJECT_SOURCE_DIR}/config/pypi/setup.py
@@ -85,18 +91,18 @@ configure_file(${PROJECT_SOURCE_DIR}/config/pypi/KCL-VAL-LICENSE
 install(FILES
     ${PROJECT_BINARY_DIR}/pypi_release/setup.py
     PERMISSIONS OWNER_EXECUTE OWNER_WRITE OWNER_READ
-    DESTINATION ${CMAKE_INSTALL_PREFIX}
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/pypi_release
 )
 install(FILES
     ${PROJECT_BINARY_DIR}/pypi_release/MANIFEST.in
     ${PROJECT_BINARY_DIR}/pypi_release/LICENSE
     ${PROJECT_BINARY_DIR}/pypi_release/README.md
     PERMISSIONS OWNER_WRITE OWNER_READ
-    DESTINATION ${CMAKE_INSTALL_PREFIX}
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/pypi_release
 )
 install(FILES
     ${PROJECT_BINARY_DIR}/pypi_release/LICENSE
     PERMISSIONS OWNER_WRITE OWNER_READ
-    DESTINATION ${CMAKE_INSTALL_PREFIX}/package/val_wrapper
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/pypi_release/package/val_wrapper
 )
 

@@ -58,14 +58,14 @@ jobs:
 
     - name: Build Pypi Python Package
       run: |
-        cd ${{github.workspace}}/${{env.BUILD_TYPE}}
+        cd ${{github.workspace}}/${{env.BUILD_TYPE}}/pypi_release
         python3 setup.py bdist_wheel --plat-name=manylinux_2_31_x86_64
 
     - name: Store the binary wheel
       uses: actions/upload-artifact@v2
       with:
         name: python-package-distributions
-        path: ${{github.workspace}}/${{env.BUILD_TYPE}}/dist
+        path: ${{github.workspace}}/${{env.BUILD_TYPE}}/pypi_release/dist
 
   build-ubuntu-18:
     # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
@@ -107,14 +107,14 @@ jobs:
 
     - name: Build Pypi Python Package
       run: |
-        cd ${{github.workspace}}/${{env.BUILD_TYPE}}
+        cd ${{github.workspace}}/${{env.BUILD_TYPE}}/pypi_release
         python3 setup.py bdist_wheel --plat-name=manylinux_2_27_x86_64
 
     - name: Store the binary wheel
       uses: actions/upload-artifact@v2
       with:
         name: python-package-distributions
-        path: ${{github.workspace}}/${{env.BUILD_TYPE}}/dist
+        path: ${{github.workspace}}/${{env.BUILD_TYPE}}/pypi_release/dist
 
   build-macos-latest:
     # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
@@ -161,14 +161,14 @@ jobs:
 
     - name: Build Pypi Python Package
       run: |
-        cd ${{github.workspace}}/${{env.BUILD_TYPE}}
+        cd ${{github.workspace}}/${{env.BUILD_TYPE}}/pypi_release
         python3 setup.py bdist_wheel --plat-name=macosx_11_0_x86_64
 
     - name: Store the binary wheel
       uses: actions/upload-artifact@v2
       with:
         name: python-package-distributions
-        path: ${{github.workspace}}/${{env.BUILD_TYPE}}/dist
+        path: ${{github.workspace}}/${{env.BUILD_TYPE}}/pypi_release/dist
 
   build-macos-10_15:
     # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
@@ -215,14 +215,14 @@ jobs:
 
     - name: Build Pypi Python Package
       run: |
-        cd ${{github.workspace}}/${{env.BUILD_TYPE}}
+        cd ${{github.workspace}}/${{env.BUILD_TYPE}}/pypi_release
         python3 setup.py bdist_wheel --plat-name=macosx_10_15_x86_64
 
     - name: Store the binary wheel
       uses: actions/upload-artifact@v2
       with:
         name: python-package-distributions
-        path: ${{github.workspace}}/${{env.BUILD_TYPE}}/dist
+        path: ${{github.workspace}}/${{env.BUILD_TYPE}}/pypi_release/dist
 
   build-windows-latest:
     # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
@@ -260,14 +260,14 @@ jobs:
 
     - name: Build Pypi Python Package
       run: |
-        cd ${{github.workspace}}/${{env.BUILD_TYPE}}
+        cd ${{github.workspace}}/${{env.BUILD_TYPE}}/pypi_release
         py setup.py bdist_wheel --plat-name=win_amd64
 
     - name: Store the binary wheel
       uses: actions/upload-artifact@v2
       with:
         name: python-package-distributions
-        path: ${{github.workspace}}/${{env.BUILD_TYPE}}/dist
+        path: ${{github.workspace}}/${{env.BUILD_TYPE}}/pypi_release/dist
 
   deploy:
     # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
