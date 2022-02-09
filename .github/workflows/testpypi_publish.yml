@@ -8,11 +8,7 @@
 
 name: TestPypiPublish
 
-on:
-  release:
-    types: [published]
-    branches: [devel]
-    
+on:   
   workflow_dispatch:
 
 env:
