@@ -18,11 +18,12 @@ with open("README.md", "r") as fh:
 
 setup(
     name            =   "val-wrapper",
-    version         =   "0.2.0",
+    version         =   "0.2.1",
     author          =   "Anubhav Singh",
     author_email    =   "anubhav.singh.er@pm.me",
     description     =   "plan validation toolkit",
     long_description=   project_description,
+    long_description_content_type='text/markdown',
     url             =   "https://github.com/LAPKT-dev/VAL-wrapper",
     packages        =   find_packages('package'),  
     package_dir     =   {'': 'package'},  

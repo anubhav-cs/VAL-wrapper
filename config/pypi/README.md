@@ -24,7 +24,6 @@ USAGE
     SYNTAX: `val_main("<executable name>", [<arg1>, <arg2>])`
 
         from val_wrapper import val_main
-        
         val_main("Validate", ["-h"])
 
 - Google colab notebook
@@ -32,7 +31,6 @@ USAGE
         !pip install val-wrapper wurlitzer --upgrade
 
         from val_wrapper import val_main
-
         from wurlitzer import sys_pipes
 
         with sys_pipes():
