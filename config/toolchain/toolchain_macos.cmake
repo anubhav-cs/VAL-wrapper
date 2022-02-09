@@ -1,0 +1,3 @@
+set(CMAKE_GENERATOR "Unix Makefiles")
+set(CMAKE_C_COMPILER gcc-10)
+set(CMAKE_CXX_COMPILER g++-10)
