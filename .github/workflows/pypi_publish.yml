@@ -6,12 +6,12 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: TestPypiPublish
+name: PypiPublish
 
 on:
   release:
     types: [published]
-    branches: [devel]
+    branches:  [main]
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
@@ -303,11 +303,10 @@ jobs:
         name: python-package-distributions
         path: dist/
 
-    - name: Publish package to TestPyPI
+    - name: Publish package to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         user: __token__
-        password: ${{ secrets.PYPI_TEST_API_TOKEN }}
-        repository_url: https://test.pypi.org/legacy/
+        password: ${{ secrets.PYPI_API_TOKEN }}
         packages_dir: dist
 
