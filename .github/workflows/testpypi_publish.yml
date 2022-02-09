@@ -6,11 +6,12 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: PypiPublish
+name: TestPypiPublish
 
 on:
   release:
     types: [published]
+    branches: [ devel ]
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
