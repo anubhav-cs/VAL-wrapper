@@ -12,6 +12,8 @@ on:
   release:
     types: [published]
     branches: [devel]
+    
+  workflow_dispatch:
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
