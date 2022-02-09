@@ -4,7 +4,8 @@ from setuptools import setup, find_packages, Extension
 with open("README.md", "r") as fh:
     project_description = fh.read()
 
-
+    """Block 1 - Trigger platform specific wheel
+    """
 # try:
 #     from wheel.bdist_wheel import bdist_wheel as _bdist_wheel
 #     class bdist_wheel(_bdist_wheel):
@@ -17,12 +18,13 @@ with open("README.md", "r") as fh:
 
 setup(
     name            =   "val-wrapper",
-    version         =   "0.1.2",
+    version         =   "0.2.3",
     author          =   "Anubhav Singh",
     author_email    =   "anubhav.singh.er@pm.me",
     description     =   "plan validation toolkit",
     long_description=   project_description,
-    url             =   "https://github.com/LAPKT-dev/VAL-wrapper",
+    long_description_content_type='text/markdown',
+    url             =   "https://github.com/LAPKT-dev/val-wrapper",
     packages        =   find_packages('package'),  
     package_dir     =   {'': 'package'},  
     classifiers     =   [
@@ -37,8 +39,11 @@ setup(
     extras_require  =   {},
     scripts         =   ['package/scripts/validate.py', ],
     include_package_data = True,
-    # cmdclass={'bdist_wheel': bdist_wheel},
 
+    # cmdclass={'bdist_wheel': bdist_wheel}, # Part of Block 1
+
+    ## Block 2 - An alternative method to trigger platform specific wheel
+    ##         - Has issues on windows   
     # ext_modules=[
     #     Extension(
     #         name='my.dummy.module',
