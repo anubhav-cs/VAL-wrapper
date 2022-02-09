@@ -1,3 +1,9 @@
+"""
+MIT License
+
+Copyright (c) 2022 Anubhav Singh
+"""
+
 cmake_minimum_required(VERSION 3.16)
 
 project("val-wrapper" VERSION 1.0)
