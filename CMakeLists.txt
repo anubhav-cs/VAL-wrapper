@@ -1,8 +1,10 @@
-"""
+#[[
+
 MIT License
 
-Copyright (c) 2022 Anubhav Singh
-"""
+Copyright (c) 2022 Anubhav Singh 
+
+]]#
 
 cmake_minimum_required(VERSION 3.16)
 
