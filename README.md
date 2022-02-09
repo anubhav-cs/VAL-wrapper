@@ -27,3 +27,29 @@ The *wrapper* source code in this repository is released under MIT license. On t
     - win_amd64
     - manylinux1_x86_64
     - ... many more, lookup the documentation
+
+# USAGE
+
+- Command line 
+
+    `validate.py` is installed as a python script, a wrapper around `Validate` executable, which can be run from the command line. The pypi script installation directory is generally in system `PATH`, if not, it should be added manually.
+
+        validate.py -h
+
+- Another python module
+
+    You can import `val_main` from `val_wrapper` and use it to run VAL binaries. SYNTAX: `val_main("<executable name>", [<arg1>, <arg2>])`
+
+        from val_wrapper import val_main
+        val_main("Validate", ["-h"])
+
+- Google colab notebook
+
+        !pip install -i https://test.pypi.org/simple/ val-wrapper --upgrade
+        !pip install wurlitzer --upgrade
+
+        from val_wrapper import val_main
+        from wurlitzer import sys_pipes
+
+        with sys_pipes():
+            val_main("Validate", ["-h"])
