@@ -43,7 +43,9 @@ The *wrapper* source code in this repository is released under MIT license. On t
 
 - From another python module
 
-    You can import `val_main` from `val_wrapper` and use it to run VAL binaries. SYNTAX: `val_main("<executable name>", [<arg1>, <arg2>])`
+    You can import `val_main` from `val_wrapper` and use it to run VAL binaries. 
+    
+    SYNTAX: `val_main("<executable name>", [<arg1>, <arg2>, ...])`
 
         from val_wrapper import val_main
         val_main("Validate", ["-h"])
