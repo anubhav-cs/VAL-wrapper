@@ -41,7 +41,7 @@ The *wrapper* source code in this repository is released under MIT license. On t
 
         validate.py -h
 
-- Another python module
+- From another python module
 
     You can import `val_main` from `val_wrapper` and use it to run VAL binaries. SYNTAX: `val_main("<executable name>", [<arg1>, <arg2>])`
 
@@ -50,8 +50,7 @@ The *wrapper* source code in this repository is released under MIT license. On t
 
 - Google colab notebook
 
-        !pip install -i https://test.pypi.org/simple/ val-wrapper --upgrade
-        !pip install wurlitzer --upgrade
+        !pip install val-wrapper wurlitzer --upgrade
 
         from val_wrapper import val_main
         from wurlitzer import sys_pipes
