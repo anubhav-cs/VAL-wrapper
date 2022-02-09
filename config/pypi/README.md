@@ -1,4 +1,4 @@
-# VAL-wrapper
+# val-wrapper
 A python wrapper over KCL-VAL binary executables compiled from [source](https://github.com/KCL-Planning/VAL).
 
 

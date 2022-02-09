@@ -3,7 +3,7 @@
 [![PypiPublish](https://github.com/anubhav-cs/VAL-wrapper/actions/workflows/pypi_publish.yml/badge.svg)](https://github.com/anubhav-cs/VAL-wrapper/actions/workflows/pypi_publish.yml)
 [![TestPypiPublish](https://github.com/anubhav-cs/VAL-wrapper/actions/workflows/testpypi_publish.yml/badge.svg)](https://github.com/anubhav-cs/VAL-wrapper/actions/workflows/testpypi_publish.yml)
 
-# VAL-wrapper
+# val-wrapper
 A python wrapper over KCL-VAL binaries compiled from [source](https://github.com/KCL-Planning/VAL)
 
 How does it work?
